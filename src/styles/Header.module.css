@@ -39,12 +39,12 @@
   background: var(--color-primary);
 }
 .me {
-  background: linear-gradient(var(--color-primary), transparent);
+  background: linear-gradient(#6ec7ea79, transparent);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  width: 22rem;
-  height: 30rem;
+  width: 20rem;
+  height: auto;
   position: absolute;
   left: calc(50% - 11rem);
   margin-top: 4rem;

@@ -19,8 +19,8 @@ const Header = ({ setActiveNav }) => {
           <Image
             src="/assets/images/header_600x700.png"
             alt="me"
-            width={600}
-            height={700}
+            width={280}
+            height={350}
             priority
           />
         </div>

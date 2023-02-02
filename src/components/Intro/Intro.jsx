@@ -15,8 +15,8 @@ const Intro = ({ setActiveNav }) => {
             <Image
               src="/assets/images/intro_460x460.png"
               alt="me"
-              width={460}
-              height={460}
+              width={286}
+              height={360}
               priority
             />
           </div>
