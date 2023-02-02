@@ -61,11 +61,11 @@
 } */
 .textContainer2 {
   margin: 0 auto;
-  width: 13ch;
+  width: 14ch;
   white-space: nowrap;
   overflow: hidden;
   border-right: 3px solid;
-  animation: typing 4s steps(12),
+  animation: typing 4s steps(14),
     animationBorder 0.5s step-end infinite alternate;
 }
 
@@ -106,5 +106,19 @@
   .header__socials,
   .scroll__down {
     display: none;
+  }
+  .cta {
+    flex-direction: column;
+    align-items: center;
+  }
+  .cta a:not(:last-child) {
+    margin-right: 0;
+  }
+  .cta a {
+    margin-top: 25px;
+    width: 150px;
+  }
+  .header {
+    padding-top: 3rem;
   }
 }

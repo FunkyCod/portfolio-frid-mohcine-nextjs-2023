@@ -74,4 +74,7 @@
     width: 100%;
     padding: 2rem 1rem;
   }
+  .section__experience {
+    padding: 20px;
+  }
 }

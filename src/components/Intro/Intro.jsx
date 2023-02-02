@@ -35,11 +35,11 @@ const Intro = ({ setActiveNav }) => {
             </article>
           </div>
 
-          <p>
-            &nbsp;&nbsp;&nbsp;&nbsp;I`ve like working with HTML,CSS,JavaScript,
-            creating everything from landing pages to APIs, creating an
-            efficient, productive and fast site. Also I like difficult tasks and
-            implementing new trends. I have liked robotics since childhood.
+          <p className={styles.introText}>
+            &nbsp;&nbsp;&nbsp;&nbsp;I`ve like working with HTML, CSS,
+            JavaScript, creating everything from landing pages to APIs, creating
+            an efficient, productive and fast site. Also I like difficult tasks
+            and implementing new trends. I have liked robotics since childhood.
             I&nbsp;worked as a design engineer for more than 5 years in the
             product field. He gained a lot of experience for further development
             both in teamwork and in his own projects.
