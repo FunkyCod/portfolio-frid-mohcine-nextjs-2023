@@ -30,7 +30,7 @@ const Contact = () => {
           </article>
           <article className={styles.contact__option}>
             <BsTelephone className={styles.contact__optionIcon} />
-            <h4>Telefon</h4>
+            <h4>Phone number</h4>
             <h5>+4389286417</h5>
             <Link href="tel:+4389286417">Call or send message</Link>
           </article>
