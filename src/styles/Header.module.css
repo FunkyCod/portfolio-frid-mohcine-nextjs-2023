@@ -13,7 +13,7 @@
 .cta {
   display: flex;
   justify-content: center;
-  /* gap: 1.2rem; */
+
   margin-top: 2.5rem;
 }
 .cta a:not(:last-child) {
@@ -24,7 +24,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* gap: 0.8rem; */
+
   position: absolute;
   left: 5rem;
   bottom: 1rem;
@@ -50,15 +50,7 @@
   margin-top: 4rem;
   border-radius: 12rem 12rem 0 0;
 }
-/* .textContainer {
-  margin: 0 auto;
-  width: 12ch;
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 3px solid;
-  animation: typing 4s steps(12),
-    animationBorder 0.5s step-end infinite alternate;
-} */
+
 .textContainer2 {
   margin: 0 auto;
   width: 14ch;
@@ -89,22 +81,18 @@
 }
 
 @media screen and (max-width: 1024px) {
-  /* header {
-    height: 100vh;
-  } */
-
-  /* section {
-    margin-top: 6rem;
-  } */
 }
 
 @media screen and (max-width: 600px) {
-  /* header {
-    height: 100vh;
-  } */
+  .header {
+    height: auto;
+  }
 
   .header__socials,
   .scroll__down {
+    display: none;
+  }
+  .me {
     display: none;
   }
   .cta {

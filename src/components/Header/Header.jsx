@@ -17,10 +17,10 @@ const Header = ({ setActiveNav }) => {
         <HeaderSocials />
         <div className={styles.me}>
           <Image
-            src="/assets/images/header_600x700.png"
+            src="/assets/images/header_286x360.png"
             alt="me"
-            width={280}
-            height={350}
+            width={286}
+            height={360}
             priority
           />
         </div>

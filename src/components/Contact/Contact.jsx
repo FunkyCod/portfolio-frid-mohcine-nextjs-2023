@@ -14,11 +14,6 @@ const Contact = () => {
   };
   return (
     <section id="contact" className={styles.contact__section}>
-      <h5>Get In Touch</h5>
-      <h5>
-        I do receive your messages and will respond asap if the valid email is
-        provided.
-      </h5>
       <h2>Contact Me</h2>
       <div className={`container ${styles.contact__container}`}>
         <div className={styles.contact__options}>

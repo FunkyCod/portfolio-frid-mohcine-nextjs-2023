@@ -1,5 +1,4 @@
 import React from 'react';
-// import CV from '../../../public/assets/pdf/MOHCINE_FRID_Resume.pdf';
 import styles from '@/styles/Header.module.css';
 import Link from 'next/link';
 
