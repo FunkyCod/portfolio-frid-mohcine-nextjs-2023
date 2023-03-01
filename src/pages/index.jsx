@@ -1,4 +1,3 @@
-import Contact from '@/components/Contact/Contact';
 import Experience from '@/components/Experience/Experience';
 import Footer from '@/components/Footer/Footer';
 import Header from '@/components/Header/Header';
@@ -21,7 +20,6 @@ export default function Home() {
       <Topbar setActiveNav={setActiveNav} activeNav={activeNav} />
       <Intro setActiveNav={setActiveNav} />
       <Experience />
-      <Contact />
       <Footer setActiveNav={setActiveNav} />
     </>
   );

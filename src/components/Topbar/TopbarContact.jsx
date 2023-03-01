@@ -8,7 +8,7 @@ import Link from 'next/link';
 
 import styles from '@/styles/Topbar.module.css';
 
-const TopbarPortfolio = ({ activeNav, setActiveNav }) => {
+const Topbar = ({ activeNav, setActiveNav }) => {
   return (
     <nav className={styles.nav}>
       <Link
@@ -33,14 +33,14 @@ const TopbarPortfolio = ({ activeNav, setActiveNav }) => {
         <BiBook />
       </Link>
       <Link
-        href="#portfolio"
+        href="/portfolio"
         onClick={() => setActiveNav('#portfolio')}
         className={activeNav === '#portfolio' ? `${styles.active}` : ''}
       >
         <RiServiceLine />
       </Link>
       <Link
-        href="/contact"
+        href="#contact"
         onClick={() => setActiveNav('#contact')}
         className={activeNav === '#contact' ? `${styles.active}` : ''}
       >
@@ -50,4 +50,4 @@ const TopbarPortfolio = ({ activeNav, setActiveNav }) => {
   );
 };
 
-export default TopbarPortfolio;
+export default Topbar;

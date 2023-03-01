@@ -3,15 +3,32 @@ import { MdOutlineEmail } from 'react-icons/md';
 import { BsTelephone } from 'react-icons/bs';
 import styles from '@/styles/Сontact.module.css';
 import Link from 'next/link';
+import emailjs from '@emailjs/browser';
 
-const Contact = () => {
+const MyContact = () => {
   const [message, setMessage] = useState(false);
   const formRef = useRef();
   const handleSubmit = (e) => {
     e.preventDefault();
     setMessage(true);
+    emailjs
+      .sendForm(
+        process.env.EMAIL_JS_SERVICE_ID,
+        process.env.EMAIL_JS_TEMPLATE_ID,
+        formRef.current,
+        process.env.EMAIL_JS_API_KEY
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
     e.target.reset();
   };
+
   return (
     <section id="contact" className={styles.contact__section}>
       <h2>Contact Me</h2>
@@ -62,4 +79,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default MyContact;

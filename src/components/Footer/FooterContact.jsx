@@ -5,7 +5,7 @@ import { FaGithub } from 'react-icons/fa';
 import { FaAngellist } from 'react-icons/fa';
 import styles from '@/styles/Footer.module.css';
 
-const FooterPortfolio = ({ setActiveNav }) => {
+const FooterContact = ({ setActiveNav }) => {
   return (
     <>
       <footer className={styles.footer}>
@@ -14,7 +14,7 @@ const FooterPortfolio = ({ setActiveNav }) => {
         </Link>
         <ul className={styles.permalinks}>
           <li>
-            <Link href="/" onClick={() => setActiveNav('/')}>
+            <Link href="/" onClick={() => setActiveNav('#home')}>
               Home
             </Link>
           </li>
@@ -37,7 +37,7 @@ const FooterPortfolio = ({ setActiveNav }) => {
             </Link>
           </li>
           <li>
-            <Link href="/contact" onClick={() => setActiveNav('#contact')}>
+            <Link href="#contact" onClick={() => setActiveNav('#contact')}>
               Contact
             </Link>
           </li>
@@ -61,4 +61,4 @@ const FooterPortfolio = ({ setActiveNav }) => {
   );
 };
 
-export default FooterPortfolio;
+export default FooterContact;

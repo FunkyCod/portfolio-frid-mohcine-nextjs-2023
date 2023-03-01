@@ -25,7 +25,7 @@ const Header = ({ setActiveNav }) => {
           />
         </div>
         <a
-          href="#contact"
+          href="/contact"
           className={styles.scroll__down}
           onClick={() => setActiveNav('#contact')}
         >

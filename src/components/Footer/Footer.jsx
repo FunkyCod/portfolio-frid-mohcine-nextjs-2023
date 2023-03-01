@@ -37,7 +37,7 @@ const Footer = ({ setActiveNav }) => {
             </Link>
           </li>
           <li>
-            <Link href="#contact" onClick={() => setActiveNav('#contact')}>
+            <Link href="/contact" onClick={() => setActiveNav('#contact')}>
               Contact
             </Link>
           </li>

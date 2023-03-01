@@ -40,7 +40,7 @@ const Topbar = ({ activeNav, setActiveNav }) => {
         <RiServiceLine />
       </Link>
       <Link
-        href="#contact"
+        href="/contact"
         onClick={() => setActiveNav('#contact')}
         className={activeNav === '#contact' ? `${styles.active}` : ''}
       >

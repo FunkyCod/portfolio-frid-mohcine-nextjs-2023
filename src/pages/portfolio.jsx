@@ -1,4 +1,4 @@
-import Contact from '@/components/Contact/Contact';
+import Contact from '@/pages/contact';
 import FooterPortfolio from '@/components/Footer/FooterPortfolio';
 import CTAPortfolio from '@/components/Header/CTAPortfolio';
 import Portfolio from '@/components/Portfolio/Portfolio';
@@ -16,7 +16,6 @@ function ProjectOne() {
       <CTAPortfolio setActiveNav={setActiveNav} />
       <TopbarPortfolio setActiveNav={setActiveNav} activeNav={activeNav} />
       <Portfolio setActiveNav={setActiveNav} />
-      <Contact />
       <FooterPortfolio setActiveNav={setActiveNav} />
     </>
   );

@@ -52,7 +52,7 @@ const Intro = ({ setActiveNav }) => {
 
           <div className={styles.about__btnBox}>
             <a
-              href="#contact"
+              href="/contact"
               className="btn btn-primary"
               onClick={() => setActiveNav('#contact')}
             >
