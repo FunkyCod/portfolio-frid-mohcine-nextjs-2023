@@ -3,6 +3,7 @@ import styles from '@/styles/Header.module.css';
 import CTA from './CTA';
 import HeaderSocials from './HeaderSocials';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const Header = ({ setActiveNav }) => {
   return (
@@ -24,13 +25,13 @@ const Header = ({ setActiveNav }) => {
             priority
           />
         </div>
-        <a
+        <Link
           href="/contact"
           className={styles.scroll__down}
           onClick={() => setActiveNav('#contact')}
         >
           Scroll Down
-        </a>
+        </Link>
       </div>
     </header>
   );

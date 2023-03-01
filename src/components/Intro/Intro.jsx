@@ -3,6 +3,7 @@ import { FaAward } from 'react-icons/fa';
 import { VscFolderLibrary } from 'react-icons/vsc';
 import styles from '@/styles/Intro.module.css';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const Intro = ({ setActiveNav }) => {
   return (
@@ -51,13 +52,13 @@ const Intro = ({ setActiveNav }) => {
           </p>
 
           <div className={styles.about__btnBox}>
-            <a
+            <Link
               href="/contact"
               className="btn btn-primary"
               onClick={() => setActiveNav('#contact')}
             >
               Let`s Talk
-            </a>
+            </Link>
           </div>
         </div>
       </div>

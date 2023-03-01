@@ -1,4 +1,3 @@
-import Contact from '@/pages/contact';
 import FooterPortfolio from '@/components/Footer/FooterPortfolio';
 import CTAPortfolio from '@/components/Header/CTAPortfolio';
 import Portfolio from '@/components/Portfolio/Portfolio';
