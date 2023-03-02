@@ -13,10 +13,10 @@ const MyContact = () => {
     setMessage(true);
     emailjs
       .sendForm(
-        process.env.EMAIL_JS_SERVICE_ID,
-        process.env.EMAIL_JS_TEMPLATE_ID,
+        'service_lc2lf0e',
+        'template_i0rob8r',
         formRef.current,
-        process.env.EMAIL_JS_API_KEY
+        'TaplYoSiWdPyN3t8N'
       )
       .then(
         (result) => {
