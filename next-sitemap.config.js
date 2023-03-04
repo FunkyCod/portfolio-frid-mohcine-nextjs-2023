@@ -1,7 +1,5 @@
 module.exports = {
-  siteUrl:
-    process.env.SITE_URL ||
-    'https://portfolio-frid-mohcine-nextjs-2023.netlify.app',
-  generateRobotsTxt: true, // (optional)
+  siteUrl: process.env.SITE_URL || 'https://frid-mohcine.netlify.app/',
+  generateRobotsTxt: true,
   sitemapSize: 7000,
 };
