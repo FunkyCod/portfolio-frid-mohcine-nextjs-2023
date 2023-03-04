@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://portfolio-frid-mohcine-nextjs-2023.netlify.app
+
+# Sitemaps
+Sitemap: https://portfolio-frid-mohcine-nextjs-2023.netlify.app/sitemap.xml
