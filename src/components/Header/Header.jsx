@@ -2,7 +2,6 @@ import React from 'react';
 import styles from '@/styles/Header.module.css';
 import CTA from './CTA';
 import HeaderSocials from './HeaderSocials';
-import Image from 'next/image';
 import Link from 'next/link';
 
 const Header = ({ setActiveNav }) => {
@@ -16,15 +15,7 @@ const Header = ({ setActiveNav }) => {
 
         <CTA setActiveNav={setActiveNav} />
         <HeaderSocials />
-        <div className={styles.me}>
-          <Image
-            src="/assets/images/header_286x360.png"
-            alt="me"
-            width={286}
-            height={360}
-            priority
-          />
-        </div>
+        
         <Link
           href="/contact"
           className={styles.scroll__down}
