@@ -7,7 +7,17 @@ import FooterContact from '@/components/Footer/FooterContact';
 
 function ContactPage() {
   <Head>
-    <title>Contact</title>
+    <title>Contact | Frid Mohcine`s</title>
+    <meta
+      name="description"
+      content="Presentation of Frid Mohcine's contact page"
+    />
+    <meta property="og:title" content="Contact Frid Mohcine`s" />
+    <meta
+      property="og:description"
+      content="Presentation of Frid Mohcine's contact page"
+    />
+    <meta property="og:image" content="/assets/images/logo.png" />
   </Head>;
   const [activeNav, setActiveNav] = useState('#contact');
   return (

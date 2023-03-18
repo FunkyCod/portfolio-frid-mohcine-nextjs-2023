@@ -7,7 +7,17 @@ import React, { useState } from 'react';
 
 function ProjectOne() {
   <Head>
-    <title>Portfolio</title>
+    <title>Portfolio | Frid Mohcine`s</title>
+    <meta
+      name="description"
+      content="Presentation of Frid Mohcine's portfolio page"
+    />
+    <meta property="og:title" content="Portfolio Frid Mohcine`s" />
+    <meta
+      property="og:description"
+      content="Presentation of Frid Mohcine's portfolio page"
+    />
+    <meta property="og:image" content="/assets/images/logo.png" />
   </Head>;
   const [activeNav, setActiveNav] = useState('#portfolio');
   return (
