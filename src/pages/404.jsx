@@ -12,7 +12,7 @@ function NotFounfPage() {
   }, [router]);
 
   return (
-    <div>
+    <div className={styles.container}>
       <h1>Ups..</h1>
       <h2>Not found page</h2>
       <p>
