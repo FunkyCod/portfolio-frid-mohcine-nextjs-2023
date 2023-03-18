@@ -6,22 +6,22 @@ import Head from 'next/head';
 import React, { useState } from 'react';
 
 function ProjectOne() {
-  <Head>
-    <title>Portfolio | Frid Mohcine`s</title>
-    <meta
-      name="description"
-      content="Presentation of Frid Mohcine's portfolio page"
-    />
-    <meta property="og:title" content="Portfolio Frid Mohcine`s" />
-    <meta
-      property="og:description"
-      content="Presentation of Frid Mohcine's portfolio page"
-    />
-    <meta property="og:image" content="/assets/images/logo.png" />
-  </Head>;
   const [activeNav, setActiveNav] = useState('#portfolio');
   return (
     <>
+      <Head>
+        <title>Portfolio | Frid Mohcine`s</title>
+        <meta
+          name="description"
+          content="Presentation of Frid Mohcine's portfolio page"
+        />
+        <meta property="og:title" content="Portfolio Frid Mohcine`s" />
+        <meta
+          property="og:description"
+          content="Presentation of Frid Mohcine's portfolio page"
+        />
+        <meta property="og:image" content="/assets/images/logo.png" />
+      </Head>
       <CTAPortfolio setActiveNav={setActiveNav} />
       <TopbarPortfolio setActiveNav={setActiveNav} activeNav={activeNav} />
       <Portfolio setActiveNav={setActiveNav} />
