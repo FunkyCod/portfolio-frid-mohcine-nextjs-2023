@@ -13,12 +13,12 @@ function ProjectOne() {
         <title>Portfolio | Frid Mohcine`s</title>
         <meta
           name="description"
-          content="Presentation of Frid Mohcine`s portfolio page"
+          content="Presentation of Frid Mohcine portfolio page"
         />
-        <meta property="og:title" content="Portfolio Frid Mohcine`s" />
+        <meta property="og:title" content="Portfolio Frid Mohcine" />
         <meta
           property="og:description"
-          content="Presentation of Frid Mohcine`s portfolio page"
+          content="Presentation of Frid Mohcine portfolio page"
         />
         <meta property="og:image" content="/assets/images/logo.png" />
       </Head>
