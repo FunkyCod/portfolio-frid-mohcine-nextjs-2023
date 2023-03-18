@@ -92,7 +92,10 @@ const MyContact = () => {
               placeholder="Your Email"
               {...register('user_email', {
                 required: true,
-                pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                pattern: {
+                  value:
+                    /^(?=.{1,64}@.{1,255}$)(?=.{6,64}$)(?=[^@]*[A-Za-z0-9])[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/,
+                },
               })}
             />
             {errors.user_email && (
