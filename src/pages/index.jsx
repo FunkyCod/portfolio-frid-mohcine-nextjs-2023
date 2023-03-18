@@ -13,7 +13,7 @@ export default function Home() {
       <Head>
         <title>Home | Frid Mohcine`s</title>
         <meta name="description" content="Home page of Frid Mohcine." />
-        <meta property="og:title" content="Home" />
+        <meta property="og:title" content="Home | Frid Mohcine`s" />
         <meta property="og:description" content="Home page of Frid Mohcine." />
         <meta property="og:image" content="/assets/images/logo.png" />
       </Head>
