@@ -1,23 +1,42 @@
-import React, { useRef, useState } from 'react';
+import React, { useState } from 'react';
 import { MdOutlineEmail } from 'react-icons/md';
 import { BsTelephone } from 'react-icons/bs';
 import styles from '@/styles/Сontact.module.css';
 import Link from 'next/link';
 import emailjs from '@emailjs/browser';
+import { useForm } from 'react-hook-form';
 
 const MyContact = () => {
   const [message, setMessage] = useState(false);
-  const formRef = useRef();
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset,
+  } = useForm();
+
+  const messages = {
+    user_name: {
+      required: 'Please enter your full name',
+      pattern: 'Your name should contain only letters',
+      minLength: 'Your name should be at least 3 characters long',
+      maxLength: 'Your name should not exceed 40 characters',
+    },
+    user_email: {
+      required: 'Please enter your email address',
+      pattern: 'Please enter a valid email address',
+    },
+    message: {
+      required: 'Please enter your message',
+      minLength: 'Your message should be at least 10 characters long',
+      maxLength: 'Your message should not exceed 5000 characters',
+    },
+  };
+
+  const onSubmit = (data) => {
     setMessage(true);
     emailjs
-      .sendForm(
-        'service_lc2lf0e',
-        'template_i0rob8r',
-        formRef.current,
-        'TaplYoSiWdPyN3t8N'
-      )
+      .send('service_lc2lf0e', 'template_i0rob8r', data, 'TaplYoSiWdPyN3t8N')
       .then(
         (result) => {
           console.log(result.text);
@@ -26,7 +45,7 @@ const MyContact = () => {
           console.log(error.text);
         }
       );
-    e.target.reset();
+    reset();
   };
 
   return (
@@ -47,32 +66,66 @@ const MyContact = () => {
             <Link href="tel:+4389286417">Call or send message</Link>
           </article>
         </div>
-        <form className={styles.form} ref={formRef} onSubmit={handleSubmit}>
-          <input
-            className={styles.input}
-            type="text"
-            placeholder="Your Full Name"
-            name="user_name"
-            required
-          />
-          <input
-            className={styles.input}
-            type="text"
-            placeholder="Your Email"
-            name="user_email"
-            required
-          />
-          <textarea
-            className={styles.textarea}
-            placeholder="Your message"
-            rows="7"
-            name="message"
-            required
-          ></textarea>
-          <button type="submit" className="btn btn-primary">
-            Send Message
-          </button>
-          {message && <span>Thanks, I`ll reply ASAP.</span>}
+        <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
+          <div className={styles.inputGroup}>
+            <input
+              className={styles.input}
+              type="text"
+              placeholder="Your Full Name"
+              {...register('user_name', {
+                required: true,
+                pattern: /^[A-Za-z]+$/,
+                minLength: 3,
+                maxLength: 40,
+              })}
+            />
+            {errors.user_name && (
+              <span className={styles.error}>
+                {messages.user_name[errors.user_name.type]}
+              </span>
+            )}
+          </div>
+          <div className={styles.inputGroup}>
+            <input
+              className={styles.input}
+              type="email"
+              placeholder="Your Email"
+              {...register('user_email', {
+                required: true,
+                pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+              })}
+            />
+            {errors.user_email && (
+              <span className={styles.error}>
+                {messages.user_email[errors.user_email.type]}
+              </span>
+            )}
+          </div>
+          <div className={styles.inputGroup}>
+            <textarea
+              className={styles.textarea}
+              placeholder="Your message"
+              rows="7"
+              {...register('message', {
+                required: true,
+                minLength: 10,
+                maxLength: 5000,
+              })}
+            ></textarea>
+            {errors.message && (
+              <span className={styles.error}>
+                {messages.message[errors.message.type]}
+              </span>
+            )}
+          </div>
+          <div className={styles.submit}>
+            <button type="submit" className="btn btn-primary">
+              Send Message
+            </button>
+            {message && (
+              <span className={styles.accept}>Thanks, I`ll reply ASAP.</span>
+            )}
+          </div>
         </form>
       </div>
     </section>

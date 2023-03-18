@@ -66,10 +66,6 @@
   font-weight: 500;
 }
 
-.form span {
-  font-size: 0.8rem;
-}
-
 .form {
   display: flex;
   flex-direction: column;
@@ -88,8 +84,8 @@
   color: var(--color-white);
 }
 .input,
-.textarea:not(:last-child) {
-  margin-bottom: 20px;
+.textarea {
+  margin-bottom: 36px;
 }
 
 @media screen and (max-width: 1024px) {
@@ -103,4 +99,27 @@
   .contact__container {
     width: var(--container-width-sm);
   }
+}
+.inputGroup {
+  position: relative;
+}
+.error {
+  color: red;
+  font-size: 0.8rem;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+.submit {
+  position: relative;
+}
+.accept {
+  font-size: 0.8rem;
+  position: absolute;
+  padding: 0.75rem 1rem;
+  border-radius: 0.4rem;
+  bottom: 0px;
+  left: 200px;
+  color: white;
+  background-color: green;
 }
